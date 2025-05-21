@@ -1,0 +1,5 @@
+function calculatePerimeter(a, b, c) {
+  return a + b + c;
+}
+let perimeter = calculatePerimeter(5, 7, 10);
+("Perimeter of the triangle is:", perimeter);
