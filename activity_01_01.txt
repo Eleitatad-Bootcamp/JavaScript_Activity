@@ -1,0 +1,30 @@
+let number = 987; 
+let words = "";
+
+let ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+let teens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
+             "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+let tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+let hundred = Math.floor(number / 100);
+let remainder = number % 100;
+let ten = Math.floor(remainder / 10);
+let one = remainder % 10;
+
+if (hundred > 0) {
+  words += ones[hundred] + " Hundred ";
+}
+
+if (remainder >= 10 && remainder < 20) {
+  words += teens[remainder - 10];
+} else {
+  if (ten > 1) {
+    words += tens[ten] + " ";
+  }
+
+  if (one > 0) {
+    words += ones[one];
+  }
+}
+
+(words.trim());
