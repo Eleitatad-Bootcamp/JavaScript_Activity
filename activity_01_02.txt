@@ -1,0 +1,24 @@
+let height = 8;
+let i = 0;
+
+while (i < height) {
+  let spaces = "";
+  let stars = "";
+  let j = 0;
+
+  // Add spaces
+  while (j < i) {
+    spaces += "  "; // You can use "\t" for tab instead
+    j++;
+  }
+
+  let k = 0;
+  // Add stars
+  while (k < height - i) {
+    stars += "* ";
+    k++;
+  }
+
+  console.log(spaces + stars);
+  i++;
+}
